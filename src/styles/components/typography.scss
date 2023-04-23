@@ -1,0 +1,21 @@
+/*
+This file is used for the most common text elements on the page. New elements should be added with caution. 
+The main criteria for the text that is located here:
+- Text is global. That is, you should consider that all blocks that will use this text will be affected when you change the parameters.
+- For greater flexibility of these elements you can omit font-weigth, line-height, color. It may seem pointless to you a block with only font-size property, but it is not, because you can easily make changes. And this is also why it's important to follow rule 1.
+*/
+
+.title {
+    &_large {
+        font-family: "Playfair Display", serif;
+        font-size: 102px;
+        font-weight: 700;
+        line-height: 110px;
+    }
+}
+
+.paragraph {
+    &_default {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,27 @@
+.button {
+    width: 185px;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #cfadac;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #967675;
+    box-shadow: 0px 20px 25px -18px rgba(150, 79, 76, 0.3);
+    transition-property: box-shadow, border, color;
+    transition: 0.3s ease-in-out;
+    font-family: "Poppins", serif;
+
+    &:hover {
+        border-color: #8a6968;
+        box-shadow: 0px 20px 30px -18px rgba(150, 79, 76, 0.5);
+        color: #8a6968;
+        transition: 0.3s ease-in-out;
+    }
+    //
+    margin: 40px;
+}

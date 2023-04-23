@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400&display=swap");
+@import "./mixins/text.scss";
+@import "./environment/variables.scss";
+@import "./components/button.scss";
+@import "./components/typography.scss";
+@import "./widgets/header.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    border: none;
+    background: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    cursor: default;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.content {
+    position: relative;
+    border-block: 1px solid #ededed;
+}
+
+.decorative-grid {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 17%;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(4, auto);
+        grid-column-gap: 26.3%;
+    }
+
+    &__vertical-line {
+        width: 1px;
+        height: 100%;
+        background-color: #ededed;
+        @media screen and (max-width: 768px) {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
