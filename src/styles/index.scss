@@ -4,6 +4,7 @@
 @import "./components/button.scss";
 @import "./components/typography.scss";
 @import "./widgets/header.scss";
+@import "./widgets/introducing-section.scss";
 
 *,
 *::before,
@@ -40,7 +41,8 @@ h6 {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1180px;
+    padding-inline: 5px;
     margin: 0 auto;
 }
 
@@ -51,10 +53,8 @@ h6 {
 
 .decorative-grid {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
+    z-index: -2;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(5, auto);

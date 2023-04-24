@@ -1,20 +1,20 @@
 .button {
-    width: 185px;
-    height: 61px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    width: 185px;
+    height: 61px;
     border: 1px solid #cfadac;
     border-radius: 6px;
+    box-shadow: 0px 20px 25px -18px rgba(150, 79, 76, 0.3);
+    font-family: "Poppins", serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: #967675;
-    box-shadow: 0px 20px 25px -18px rgba(150, 79, 76, 0.3);
+    background-color: #fff;
     transition-property: box-shadow, border, color;
     transition: 0.3s ease-in-out;
-    font-family: "Poppins", serif;
 
     &:hover {
         border-color: #8a6968;
@@ -22,6 +22,10 @@
         color: #8a6968;
         transition: 0.3s ease-in-out;
     }
-    //
-    margin: 40px;
+
+    @media screen and (max-width: 768px) {
+        width: 300px;
+        height: 75px;
+        font-size: 18px;
+    }
 }
