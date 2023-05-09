@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Poppins:wght@300;400&display=swap");
-@import "./mixins/text.scss";
 @import "./environment/variables.scss";
 @import "./components/button.scss";
 @import "./components/typography.scss";
 @import "./widgets/header.scss";
 @import "./widgets/introducing-section.scss";
+@import "./widgets/product-details-section.scss";
+@import "./widgets/fire-headwear-section.scss";
+@import "./widgets/our-range-section.scss";
+@import "./widgets/in-quotion-section.scss";
+@import "./widgets/newsletter-section.scss";
+@import "./widgets/footer.scss";
 
 *,
 *::before,
@@ -19,9 +24,10 @@ body {
 }
 
 button {
+    cursor: pointer;
+
     border: none;
     background: inherit;
-    cursor: pointer;
 }
 
 a {
@@ -42,8 +48,8 @@ h6 {
 
 .container {
     max-width: 1180px;
-    padding-inline: 5px;
     margin: 0 auto;
+    padding-inline: 5px;
 }
 
 .content {
@@ -53,13 +59,12 @@ h6 {
 
 .decorative-grid {
     position: absolute;
-    inset: 0;
     z-index: -2;
     display: grid;
     justify-content: center;
+    inset: 0;
     grid-template-columns: repeat(5, auto);
     grid-column-gap: 17%;
-
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(4, auto);
         grid-column-gap: 26.3%;

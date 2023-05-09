@@ -1,26 +1,25 @@
 .button {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 185px;
     height: 61px;
+    transition: 0.3s ease-in-out;
+    transition-property: box-shadow, border, color;
+    color: #967675;
     border: 1px solid #cfadac;
     border-radius: 6px;
-    box-shadow: 0px 20px 25px -18px rgba(150, 79, 76, 0.3);
+    background-color: #fff;
+    box-shadow: 0 20px 25px -18px rgba(150, 79, 76, 0.3);
     font-family: "Poppins", serif;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 400;
-    color: #967675;
-    background-color: #fff;
-    transition-property: box-shadow, border, color;
-    transition: 0.3s ease-in-out;
-
+    line-height: 24px;
     &:hover {
-        border-color: #8a6968;
-        box-shadow: 0px 20px 30px -18px rgba(150, 79, 76, 0.5);
-        color: #8a6968;
         transition: 0.3s ease-in-out;
+        color: #8a6968;
+        border-color: #8a6968;
+        box-shadow: 0 20px 30px -18px rgba(150, 79, 76, 0.5);
     }
 
     @media screen and (max-width: 768px) {

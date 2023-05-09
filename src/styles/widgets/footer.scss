@@ -1,0 +1,104 @@
+.footer {
+    padding: 126px 0 129px 0;
+    color: #fff;
+    background-color: $primary-dark;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer-info-block {
+    &__title {
+        margin: 0 0 25px 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: Playfair Display;
+        font-size: 34px;
+        font-weight: 300;
+    }
+
+    &__description {
+        width: 291px;
+        margin: 0 0 123px 14px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        line-height: 31px;
+
+        @extend .paragraph_default;
+    }
+
+    &__terms {
+        display: block;
+        margin-left: 20px;
+        opacity: 0.5;
+        line-height: 2rem;
+
+        @extend .paragraph_default;
+    }
+}
+
+.footer-navigation-block {
+    display: grid;
+    padding: 8px 29px 0 0;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 126px;
+
+    &__column-title {
+        margin-bottom: 11px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__list-item {
+        margin-bottom: 9px;
+        line-height: 2rem;
+
+        @extend .paragraph_default;
+    }
+}
+
+@media screen and (max-width: 914px) {
+    .footer {
+        padding: 61px 0 61px 0;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    .footer-info-block {
+        margin-bottom: 49px;
+        &__title {
+            margin: 0 0 25px -23px;
+        }
+
+        &__description {
+            margin: 0 0 32px -23px;
+        }
+
+        &__terms {
+            width: 240px;
+            margin: 0 0 0 -23px;
+            line-height: 26px;
+        }
+    }
+
+    .footer-navigation-block {
+        padding: 0;
+        grid-column-gap: 56px;
+    }
+}
+
+@media screen and (max-width: 422px) {
+    .footer-navigation-block {
+        align-self: start;
+        padding: 0 0 0 48px;
+        grid-template-columns: repeat(1, auto);
+        grid-row-gap: 46px;
+    }
+}
